@@ -17,7 +17,7 @@ function onClick(e) {
   if (e.target.dataset.action === 'start') {
     e.target.disabled = true;
     intervalId = setInterval(() => {
-      const bgColor = randomIntegerFromInterval(0, colors.length);
+      const bgColor = randomIntegerFromInterval(0, colors.length - 1);
       refs.bodyNode.style.background = colors[bgColor];
     }, 1000);
   }
